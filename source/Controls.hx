@@ -46,6 +46,60 @@ enum abstract Action(String) to String from String
 	var BACK = "back";
 	var PAUSE = "pause";
 	var RESET = "reset";
+	
+	var S0 = "s0";
+	var S1 = "s1";
+	var S2 = "s2";
+	var S3 = "s3";
+	var S4 = "s4";
+	var S5 = "s5";
+	var S6 = "s6";
+	
+	var S0_P = "s0-press";
+	var S1_P = "s1-press";
+	var S2_P = "s2-press";
+	var S3_P = "s3-press";
+	var S4_P = "s4-press";
+	var S5_P = "s5-press";
+	var S6_P = "s6-press";
+	
+	var S0_R = "s0-release";
+	var S1_R = "s1-release";
+	var S2_R = "s2-release";
+	var S3_R = "s3-release";
+	var S4_R = "s4-release";
+	var S5_R = "s5-release";
+	var S6_R = "s6-release";
+	
+	var N0 = "n0";
+	var N1 = "n1";
+	var N2 = "n2";
+	var N3 = "n3";
+	var N4 = "n4";
+	var N5 = "n5";
+	var N6 = "n6";
+	var N7 = "n7";
+	var N8 = "n8";
+	
+	var N0_P = "n0-press";
+	var N1_P = "n1-press";
+	var N2_P = "n2-press";
+	var N3_P = "n3-press";
+	var N4_P = "n4-press";
+	var N5_P = "n5-press";
+	var N6_P = "n6-press";
+	var N7_P = "n7-press";
+	var N8_P = "n8-press";
+	
+	var N0_R = "n0-release";
+	var N1_R = "n1-release";
+	var N2_R = "n2-release";
+	var N3_R = "n3-release";
+	var N4_R = "n4-release";
+	var N5_R = "n5-release";
+	var N6_R = "n6-release";
+	var N7_R = "n7-release";
+	var N8_R = "n8-release";
 }
 #else
 @:enum
@@ -79,6 +133,60 @@ abstract Action(String) to String from String
 	var BACK = "back";
 	var PAUSE = "pause";
 	var RESET = "reset";
+	
+	var S0 = "s0";
+	var S1 = "s1";
+	var S2 = "s2";
+	var S3 = "s3";
+	var S4 = "s4";
+	var S5 = "s5";
+	var S6 = "s6";
+	
+	var S0_P = "s0-press";
+	var S1_P = "s1-press";
+	var S2_P = "s2-press";
+	var S3_P = "s3-press";
+	var S4_P = "s4-press";
+	var S5_P = "s5-press";
+	var S6_P = "s6-press";
+	
+	var S0_R = "s0-release";
+	var S1_R = "s1-release";
+	var S2_R = "s2-release";
+	var S3_R = "s3-release";
+	var S4_R = "s4-release";
+	var S5_R = "s5-release";
+	var S6_R = "s6-release";
+	
+	var N0 = "n0";
+	var N1 = "n1";
+	var N2 = "n2";
+	var N3 = "n3";
+	var N4 = "n4";
+	var N5 = "n5";
+	var N6 = "n6";
+	var N7 = "n7";
+	var N8 = "n8";
+	
+	var N0_P = "n0-press";
+	var N1_P = "n1-press";
+	var N2_P = "n2-press";
+	var N3_P = "n3-press";
+	var N4_P = "n4-press";
+	var N5_P = "n5-press";
+	var N6_P = "n6-press";
+	var N7_P = "n7-press";
+	var N8_P = "n8-press";
+	
+	var N0_R = "n0-release";
+	var N1_R = "n1-release";
+	var N2_R = "n2-release";
+	var N3_R = "n3-release";
+	var N4_R = "n4-release";
+	var N5_R = "n5-release";
+	var N6_R = "n6-release";
+	var N7_R = "n7-release";
+	var N8_R = "n8-release";
 }
 #end
 
@@ -107,6 +215,24 @@ enum Control
 	ACCEPT;
 	BACK;
 	PAUSE;
+	
+	S0;
+	S1;
+	S2;
+	S3;
+	S4;
+	S5;
+	S6;
+	
+	N0;
+	N1;
+	N2;
+	N3;
+	N4;
+	N5;
+	N6;
+	N7;
+	N8;
 }
 
 enum KeyboardScheme
@@ -151,6 +277,60 @@ class Controls extends FlxActionSet
 	var _back = new FlxActionDigital(Action.BACK);
 	var _pause = new FlxActionDigital(Action.PAUSE);
 	var _reset = new FlxActionDigital(Action.RESET);
+	
+	var _s0 = new FlxActionDigital(Action.S0);
+	var _s1 = new FlxActionDigital(Action.S1);
+	var _s2 = new FlxActionDigital(Action.S2);
+	var _s3 = new FlxActionDigital(Action.S3);
+	var _s4 = new FlxActionDigital(Action.S4);
+	var _s5 = new FlxActionDigital(Action.S5);
+	var _s6 = new FlxActionDigital(Action.S6);
+
+	var _s0P = new FlxActionDigital(Action.S0_P);
+	var _s1P = new FlxActionDigital(Action.S1_P);
+	var _s2P = new FlxActionDigital(Action.S2_P);
+	var _s3P = new FlxActionDigital(Action.S3_P);
+	var _s4P = new FlxActionDigital(Action.S4_P);
+	var _s5P = new FlxActionDigital(Action.S5_P);
+	var _s6P = new FlxActionDigital(Action.S6_P);
+
+	var _s0R = new FlxActionDigital(Action.S0_R);
+	var _s1R = new FlxActionDigital(Action.S1_R);
+	var _s2R = new FlxActionDigital(Action.S2_R);
+	var _s3R = new FlxActionDigital(Action.S3_R);
+	var _s4R = new FlxActionDigital(Action.S4_R);
+	var _s5R = new FlxActionDigital(Action.S5_R);
+	var _s6R = new FlxActionDigital(Action.S6_R);
+	
+	var _n0 = new FlxActionDigital(Action.N0);
+	var _n1 = new FlxActionDigital(Action.N1);
+	var _n2 = new FlxActionDigital(Action.N2);
+	var _n3 = new FlxActionDigital(Action.N3);
+	var _n4 = new FlxActionDigital(Action.N4);
+	var _n5 = new FlxActionDigital(Action.N5);
+	var _n6 = new FlxActionDigital(Action.N6);
+	var _n7 = new FlxActionDigital(Action.N7);
+	var _n8 = new FlxActionDigital(Action.N8);
+
+	var _n0P = new FlxActionDigital(Action.N0_P);
+	var _n1P = new FlxActionDigital(Action.N1_P);
+	var _n2P = new FlxActionDigital(Action.N2_P);
+	var _n3P = new FlxActionDigital(Action.N3_P);
+	var _n4P = new FlxActionDigital(Action.N4_P);
+	var _n5P = new FlxActionDigital(Action.N5_P);
+	var _n6P = new FlxActionDigital(Action.N6_P);
+	var _n7P = new FlxActionDigital(Action.N7_P);
+	var _n8P = new FlxActionDigital(Action.N8_P);
+
+	var _n0R = new FlxActionDigital(Action.N0_R);
+	var _n1R = new FlxActionDigital(Action.N1_R);
+	var _n2R = new FlxActionDigital(Action.N2_R);
+	var _n3R = new FlxActionDigital(Action.N3_R);
+	var _n4R = new FlxActionDigital(Action.N4_R);
+	var _n5R = new FlxActionDigital(Action.N5_R);
+	var _n6R = new FlxActionDigital(Action.N6_R);
+	var _n7R = new FlxActionDigital(Action.N7_R);
+	var _n8R = new FlxActionDigital(Action.N8_R);
 
 	#if (haxe >= "4.0.0")
 	var byName:Map<String, FlxActionDigital> = [];
@@ -300,6 +480,61 @@ class Controls extends FlxActionSet
 
 	inline function get_RESET()
 		return _reset.check();
+	
+	public var S0(get, never):Bool; inline function get_S0() {return _s0.check();}
+	public var S1(get, never):Bool; inline function get_S1() {return _s1.check();}
+	public var S2(get, never):Bool; inline function get_S2() {return _s2.check();}
+	public var S3(get, never):Bool; inline function get_S3() {return _s3.check();}
+	public var S4(get, never):Bool; inline function get_S4() {return _s4.check();}
+	public var S5(get, never):Bool; inline function get_S5() {return _s5.check();}
+	public var S6(get, never):Bool; inline function get_S6() {return _s6.check();}
+
+	public var S0_P(get, never):Bool; inline function get_S0_P() {return _s0P.check();}
+	public var S1_P(get, never):Bool; inline function get_S1_P() {return _s1P.check();}
+	public var S2_P(get, never):Bool; inline function get_S2_P() {return _s2P.check();}
+	public var S3_P(get, never):Bool; inline function get_S3_P() {return _s3P.check();}
+	public var S4_P(get, never):Bool; inline function get_S4_P() {return _s4P.check();}
+	public var S5_P(get, never):Bool; inline function get_S5_P() {return _s5P.check();}
+	public var S6_P(get, never):Bool; inline function get_S6_P() {return _s6P.check();}
+
+	public var S0_R(get, never):Bool; inline function get_S0_R() {return _s0R.check();}
+	public var S1_R(get, never):Bool; inline function get_S1_R() {return _s1R.check();}
+	public var S2_R(get, never):Bool; inline function get_S2_R() {return _s2R.check();}
+	public var S3_R(get, never):Bool; inline function get_S3_R() {return _s3R.check();}
+	public var S4_R(get, never):Bool; inline function get_S4_R() {return _s4R.check();}
+	public var S5_R(get, never):Bool; inline function get_S5_R() {return _s5R.check();}
+	public var S6_R(get, never):Bool; inline function get_S6_R() {return _s6R.check();}
+	
+	
+	public var N0(get, never):Bool; inline function get_N0() {return _n0.check();}
+	public var N1(get, never):Bool; inline function get_N1() {return _n1.check();}
+	public var N2(get, never):Bool; inline function get_N2() {return _n2.check();}
+	public var N3(get, never):Bool; inline function get_N3() {return _n3.check();}
+	public var N4(get, never):Bool; inline function get_N4() {return _n4.check();}
+	public var N5(get, never):Bool; inline function get_N5() {return _n5.check();}
+	public var N6(get, never):Bool; inline function get_N6() {return _n6.check();}
+	public var N7(get, never):Bool; inline function get_N7() {return _n7.check();}
+	public var N8(get, never):Bool; inline function get_N8() {return _n8.check();}
+
+	public var N0_P(get, never):Bool; inline function get_N0_P() {return _n0P.check();}
+	public var N1_P(get, never):Bool; inline function get_N1_P() {return _n1P.check();}
+	public var N2_P(get, never):Bool; inline function get_N2_P() {return _n2P.check();}
+	public var N3_P(get, never):Bool; inline function get_N3_P() {return _n3P.check();}
+	public var N4_P(get, never):Bool; inline function get_N4_P() {return _n4P.check();}
+	public var N5_P(get, never):Bool; inline function get_N5_P() {return _n5P.check();}
+	public var N6_P(get, never):Bool; inline function get_N6_P() {return _n6P.check();}
+	public var N7_P(get, never):Bool; inline function get_N7_P() {return _n7P.check();}
+	public var N8_P(get, never):Bool; inline function get_N8_P() {return _n8P.check();}
+
+	public var N0_R(get, never):Bool; inline function get_N0_R() {return _n0R.check();}
+	public var N1_R(get, never):Bool; inline function get_N1_R() {return _n1R.check();}
+	public var N2_R(get, never):Bool; inline function get_N2_R() {return _n2R.check();}
+	public var N3_R(get, never):Bool; inline function get_N3_R() {return _n3R.check();}
+	public var N4_R(get, never):Bool; inline function get_N4_R() {return _n4R.check();}
+	public var N5_R(get, never):Bool; inline function get_N5_R() {return _n5R.check();}
+	public var N6_R(get, never):Bool; inline function get_N6_R() {return _n6R.check();}
+	public var N7_R(get, never):Bool; inline function get_N7_R() {return _n7R.check();}
+	public var N8_R(get, never):Bool; inline function get_N8_R() {return _n8R.check();}
 
 	#if (haxe >= "4.0.0")
 	public function new(name, scheme = None)
@@ -334,6 +569,62 @@ class Controls extends FlxActionSet
 		add(_back);
 		add(_pause);
 		add(_reset);
+		
+		add(_s0);
+		add(_s1);
+		add(_s2);
+		add(_s3);
+		add(_s4);
+		add(_s5);
+		add(_s6);
+		
+		add(_s0P);
+		add(_s1P);
+		add(_s2P);
+		add(_s3P);
+		add(_s4P);
+		add(_s5P);
+		add(_s6P);
+		
+		add(_s0R);
+		add(_s1R);
+		add(_s2R);
+		add(_s3R);
+		add(_s4R);
+		add(_s5R);
+		add(_s6R);
+		
+		
+		add(_n0);
+		add(_n1);
+		add(_n2);
+		add(_n3);
+		add(_n4);
+		add(_n5);
+		add(_n6);
+		add(_n7);
+		add(_n8);
+		
+		add(_n0P);
+		add(_n1P);
+		add(_n2P);
+		add(_n3P);
+		add(_n4P);
+		add(_n5P);
+		add(_n6P);
+		add(_n7P);
+		add(_n8P);
+		
+		add(_n0R);
+		add(_n1R);
+		add(_n2R);
+		add(_n3R);
+		add(_n4R);
+		add(_n5R);
+		add(_n6R);
+		add(_n7R);
+		add(_n8R);
+
 
 		for (action in digitalActions)
 			byName[action.name] = action;
@@ -373,6 +664,61 @@ class Controls extends FlxActionSet
 		add(_back);
 		add(_pause);
 		add(_reset);
+		
+		add(_s0);
+		add(_s1);
+		add(_s2);
+		add(_s3);
+		add(_s4);
+		add(_s5);
+		add(_s6);
+		
+		add(_s0P);
+		add(_s1P);
+		add(_s2P);
+		add(_s3P);
+		add(_s4P);
+		add(_s5P);
+		add(_s6P);
+		
+		add(_s0R);
+		add(_s1R);
+		add(_s2R);
+		add(_s3R);
+		add(_s4R);
+		add(_s5R);
+		add(_s6R);
+		
+		
+		add(_n0);
+		add(_n1);
+		add(_n2);
+		add(_n3);
+		add(_n4);
+		add(_n5);
+		add(_n6);
+		add(_n7);
+		add(_n8);
+		
+		add(_n0P);
+		add(_n1P);
+		add(_n2P);
+		add(_n3P);
+		add(_n4P);
+		add(_n5P);
+		add(_n6P);
+		add(_n7P);
+		add(_n8P);
+		
+		add(_n0R);
+		add(_n1R);
+		add(_n2R);
+		add(_n3R);
+		add(_n4R);
+		add(_n5R);
+		add(_n6R);
+		add(_n7R);
+		add(_n8R);
 
 		for (action in digitalActions)
 			byName[action.name] = action;
@@ -581,6 +927,25 @@ class Controls extends FlxActionSet
 			case BACK: _back;
 			case PAUSE: _pause;
 			case RESET: _reset;
+			
+			case S0: _s0;
+			case S1: _s1;
+			case S2: _s2;
+			case S3: _s3;
+			case S4: _s4;
+			case S5: _s5;
+			case S6: _s6;
+
+			
+			case N0: _n0;
+			case N1: _n1;
+			case N2: _n2;
+			case N3: _n3;
+			case N4: _n4;
+			case N5: _n5;
+			case N6: _n6;
+			case N7: _n7;
+			case N8: _n8;
 		}
 	}
 
@@ -640,6 +1005,73 @@ class Controls extends FlxActionSet
 				func(_pause, JUST_PRESSED);
 			case RESET:
 				func(_reset, JUST_PRESSED);
+				
+			case S0:
+				func(_s0, PRESSED);
+				func(_s0P, JUST_PRESSED);
+				func(_s0R, JUST_RELEASED);
+			case S1:
+				func(_s1, PRESSED);
+				func(_s1P, JUST_PRESSED);
+				func(_s1R, JUST_RELEASED);
+			case S2:
+				func(_s2, PRESSED);
+				func(_s2P, JUST_PRESSED);
+				func(_s2R, JUST_RELEASED);
+			case S3:
+				func(_s3, PRESSED);
+				func(_s3P, JUST_PRESSED);
+				func(_s3R, JUST_RELEASED);
+			case S4:
+				func(_s4, PRESSED);
+				func(_s4P, JUST_PRESSED);
+				func(_s4R, JUST_RELEASED);
+			case S5:
+				func(_s5, PRESSED);
+				func(_s5P, JUST_PRESSED);
+				func(_s5R, JUST_RELEASED);
+			case S6:
+				func(_s6, PRESSED);
+				func(_s6P, JUST_PRESSED);
+				func(_s6R, JUST_RELEASED);
+				
+				
+			case N0:
+				func(_n0, PRESSED);
+				func(_n0P, JUST_PRESSED);
+				func(_n0R, JUST_RELEASED);
+			case N1:
+				func(_n1, PRESSED);
+				func(_n1P, JUST_PRESSED);
+				func(_n1R, JUST_RELEASED);
+			case N2:
+				func(_n2, PRESSED);
+				func(_n2P, JUST_PRESSED);
+				func(_n2R, JUST_RELEASED);
+			case N3:
+				func(_n3, PRESSED);
+				func(_n3P, JUST_PRESSED);
+				func(_n3R, JUST_RELEASED);
+			case N4:
+				func(_n4, PRESSED);
+				func(_n4P, JUST_PRESSED);
+				func(_n4R, JUST_RELEASED);
+			case N5:
+				func(_n5, PRESSED);
+				func(_n5P, JUST_PRESSED);
+				func(_n5R, JUST_RELEASED);
+			case N6:
+				func(_n6, PRESSED);
+				func(_n6P, JUST_PRESSED);
+				func(_n6R, JUST_RELEASED);
+			case N7:
+				func(_n7, PRESSED);
+				func(_n7P, JUST_PRESSED);
+				func(_n7R, JUST_RELEASED);
+			case N8:
+				func(_n8, PRESSED);
+				func(_n8P, JUST_PRESSED);
+				func(_n8R, JUST_RELEASED);
 		}
 	}
 
