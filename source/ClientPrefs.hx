@@ -50,23 +50,23 @@ class ClientPrefs {
 		keyBinds.set('pause', [ENTER, ESCAPE]);
 		keyBinds.set('reset', [R, NONE]);
 		
-		keyBinds.set('6k0', [S, W]);
-		keyBinds.set('6k1', [D, E]);
-		keyBinds.set('6k2', [F, R]);
-		keyBinds.set('6k3', [SPACE, G]);
-		keyBinds.set('6k4', [J, U]);
-		keyBinds.set('6k5', [K, I]);
-		keyBinds.set('6k6', [L, O]);
+		keyBinds.set('s0', [S, W]);
+		keyBinds.set('s1', [D, E]);
+		keyBinds.set('s2', [F, R]);
+		keyBinds.set('s3', [SPACE, G]);
+		keyBinds.set('s4', [J, U]);
+		keyBinds.set('s5', [K, I]);
+		keyBinds.set('s6', [L, O]);
 
-		keyBinds.set('9k0', [A, Q]);
-		keyBinds.set('9k1', [S, W]);
-		keyBinds.set('9k2', [D, E]);
-		keyBinds.set('9k3', [F, R]);
-		keyBinds.set('9k4', [SPACE, G]);
-		keyBinds.set('9k5', [H, Y]);
-		keyBinds.set('9k6', [J, U]);
-		keyBinds.set('9k7', [K, I]);
-		keyBinds.set('9k8', [L, O]);
+		keyBinds.set('n0', [A, Q]);
+		keyBinds.set('n1', [S, W]);
+		keyBinds.set('n2', [D, E]);
+		keyBinds.set('n3', [F, R]);
+		keyBinds.set('n4', [SPACE, G]);
+		keyBinds.set('n5', [H, Y]);
+		keyBinds.set('n6', [J, U]);
+		keyBinds.set('n7', [K, I]);
+		keyBinds.set('n8', [L, O]);
 
 
 		// Don't delete this
