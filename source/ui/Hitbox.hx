@@ -169,16 +169,16 @@ class Hitbox extends FlxSpriteGroup
             }
 			case FIVE:
             {
-                hitbox_hint.loadGraphic('assets/shared/images/hitbox/hitbox_hint.png');
+                hitbox_hint.loadGraphic('assets/shared/images/hitbox/hitbox5k_hint.png');
 
-                frameshb = FlxAtlasFrames.fromSparrow('assets/shared/images/hitbox/hitbox.png', 'assets/shared/images/hitbox/hitbox.xml');
+                frameshb = FlxAtlasFrames.fromSparrow('assets/shared/images/hitbox/hitbox5k.png', 'assets/shared/images/hitbox/hitbox5k.xml');
                 sizex = 256;
 
-                hitbox.add(add(buttonLeft = createhitbox(0, "left")));
-                hitbox.add(add(buttonDown = createhitbox(sizex, "down")));
-				hitbox.add(add(buttonSpace = createhitbox(sizex * 2 "k3")));
-                hitbox.add(add(buttonUp = createhitbox(sizex * 3, "up")));
-                hitbox.add(add(buttonRight = createhitbox(sizex * 4, "right")));    
+                hitbox.add(add(buttonLeft = createhitbox(0, "k1")));
+                hitbox.add(add(buttonDown = createhitbox(sizex, "k2")));
+		hitbox.add(add(buttonSpace = createhitbox(sizex * 2, "k3")));
+                hitbox.add(add(buttonUp = createhitbox(sizex * 3, "k4")));
+                hitbox.add(add(buttonRight = createhitbox(sizex * 4, "k5")));    
             }
             default:
             {
