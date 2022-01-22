@@ -62,13 +62,17 @@ import sys.io.File;
 #end
 
 #if mobileC
-import ui.Mobilecontrols;
+import ui.Hitbox;
 #end
 
 using StringTools;
 
 class PlayState extends MusicBeatState
 {
+	//#if mobileC
+	var _hitbox:Hitbox;
+	//#end
+	
 	public static var STRUM_X = 42;
 	public static var STRUM_X_MIDDLESCROLL = -278;
 
@@ -972,26 +976,40 @@ class PlayState extends MusicBeatState
 		doof.cameras = [camHUD];
 
 		#if mobileC
-			mcontrols = new Mobilecontrols();
-			switch (mcontrols.mode)
-			{
-				case VIRTUALPAD_RIGHT | VIRTUALPAD_LEFT | VIRTUALPAD_CUSTOM:
-					controls.setVirtualPadNOTES(mcontrols._virtualPad, FULL, NONE);
-				case HITBOX:
-					controls.setHitBoxNOTES(mcontrols._hitbox);
-				default:
-			}
-			trackedinputsNOTES = controls.trackedinputsNOTES;
-			controls.trackedinputsNOTES = [];
+		var curcontrol:HitboxType = DEFAULT;
 
-			var camcontrol = new FlxCamera();
-			FlxG.cameras.add(camcontrol);
-			camcontrol.bgColor.alpha = 0;
-			mcontrols.cameras = [camcontrol];
+		switch (mania){
+			case 0:
+				curcontrol = DEFAULT;
+			case 1:
+				curcontrol = SIX;
+			case 2:
+				curcontrol = NINE;					
+			case 3:
+				curcontrol = FIVE;	
+			case 4:
+				curcontrol = SEVEN;
+			case 5:
+				curcontrol = EIGHT;
+			case 6:
+				curcontrol = ONE;
+			case 7:
+				curcontrol = TWO;
+			case 8:
+				curcontrol = THREE;									
+			default:
+				curcontrol = DEFAULT;
+		}
+		_hitbox = new Hitbox(curcontrol);
 
-			mcontrols.visible = false;
+		var camcontrol = new FlxCamera();
+		FlxG.cameras.add(camcontrol);
+		camcontrol.bgColor.alpha = 0;
+		_hitbox.cameras = [camcontrol];
 
-			add(mcontrols);
+		_hitbox.visible = false;
+		
+		add(_hitbox);
 		#end		
 
 		// if (SONG.song == 'South')
@@ -3540,6 +3558,79 @@ class PlayState extends MusicBeatState
 
 	private function keyShit():Void
 	{
+		// ---------- default ------------
+		var note_up = _hitbox.buttonUp.pressed;
+		var note_right = _hitbox.buttonRight.pressed;
+		var note_down = _hitbox.buttonDown.pressed;
+		var note_left = _hitbox.buttonLeft.pressed;
+
+		var note_upP = _hitbox.buttonUp.justPressed;
+		var note_rightP = _hitbox.buttonRight.justPressed;
+		var note_downP = _hitbox.buttonDown.justPressed;
+		var note_leftP = _hitbox.buttonLeft.justPressed;
+
+		var note_upR = _hitbox.buttonUp.justReleased;
+		var note_rightR = _hitbox.buttonRight.justReleased;
+		var note_downR = _hitbox.buttonDown.justReleased;
+		var note_leftR = _hitbox.buttonLeft.justReleased;
+
+		// ------------------ six & seven----------------------
+		var s0 = controls.S0 || _hitbox.buttonLeft.pressed; 
+		var s1 = controls.S1 || _hitbox.buttonUp.pressed; 
+		var s2 = controls.S2 || _hitbox.buttonRight.pressed;
+		var s3 = controls.S3 || _hitbox.buttonSpace.pressed;
+		var s4 = controls.S4 || _hitbox.buttonLeft2.pressed; 
+		var s5 = controls.S5 || _hitbox.buttonDown2.pressed; 
+		var s6 = controls.S6 || _hitbox.buttonRight2.pressed; 
+
+		var s0P = controls.S0_P || _hitbox.buttonLeft.justPressed; 
+		var s1P = controls.S1_P || _hitbox.buttonUp.justPressed; 
+		var s2P = controls.S2_P || _hitbox.buttonRight.justPressed;
+		var s3P = controls.S3_P || _hitbox.buttonSpace.justPressed;
+		var s4P = controls.S4_P || _hitbox.buttonLeft2.justPressed; 
+		var s5P = controls.S5_P || _hitbox.buttonDown2.justPressed; 
+		var s6P = controls.S6_P || _hitbox.buttonRight2.justPressed; 
+
+		var s0R = controls.S0_R || _hitbox.buttonLeft.justReleased; 
+		var s1R = controls.S1_R || _hitbox.buttonUp.justReleased; 
+		var s2R = controls.S2_R || _hitbox.buttonRight.justReleased;
+		var s3R = controls.S3_R || _hitbox.buttonSpace.justReleased; 
+		var s4R = controls.S4_R || _hitbox.buttonLeft2.justReleased; 
+		var s5R = controls.S5_R || _hitbox.buttonDown2.justReleased; 
+		var s6R = controls.S6_R || _hitbox.buttonRight2.justReleased; 
+
+		// -------------- nine --------------------
+		var n0 = controls.N0 || _hitbox.buttonLeft.pressed; 
+		var n1 = controls.N1 || _hitbox.buttonDown.pressed; 
+		var n2 = controls.N2 || _hitbox.buttonUp.pressed; 
+		var n3 = controls.N3 || _hitbox.buttonRight.pressed; 
+		var n4 = controls.N4 || _hitbox.buttonSpace.pressed; 
+		var n5 = controls.N5 || _hitbox.buttonLeft2.pressed; 
+		var n6 = controls.N6 || _hitbox.buttonDown2.pressed; 
+		var n7 = controls.N7 || _hitbox.buttonUp2.pressed; 
+		var n8 = controls.N8 || _hitbox.buttonRight2.pressed; 
+
+		var n0P = controls.N0_P || _hitbox.buttonLeft.justPressed; 
+		var n1P = controls.N1_P || _hitbox.buttonDown.justPressed; 
+		var n2P = controls.N2_P || _hitbox.buttonUp.justPressed; 
+		var n3P = controls.N3_P || _hitbox.buttonRight.justPressed; 
+		var n4P = controls.N4_P || _hitbox.buttonSpace.justPressed; 
+		var n5P = controls.N5_P || _hitbox.buttonLeft2.justPressed; 
+		var n6P = controls.N6_P || _hitbox.buttonDown2.justPressed; 
+		var n7P = controls.N7_P || _hitbox.buttonUp2.justPressed; 
+		var n8P = controls.N8_P || _hitbox.buttonRight2.justPressed; 
+
+		var n0R = controls.N0_R || _hitbox.buttonLeft.justReleased; 
+		var n1R = controls.N1_R || _hitbox.buttonDown.justReleased; 
+		var n2R = controls.N2_R || _hitbox.buttonUp.justReleased; 
+		var n3R = controls.N3_R || _hitbox.buttonRight.justReleased; 
+		var n4R = controls.N4_R || _hitbox.buttonSpace.justReleased; 
+		var n5R = controls.N5_R || _hitbox.buttonLeft2.justReleased; 
+		var n6R = controls.N6_R || _hitbox.buttonDown2.justReleased; 
+		var n7R = controls.N7_R || _hitbox.buttonUp2.justReleased; 
+		var n8R = controls.N8_R || _hitbox.buttonRight2.justReleased; 
+
+		var ex1 = false;
 		
 		// FlxG.watch.addQuick('asdfa', upP);
 		if (!boyfriend.stunned && generatedMusic)
