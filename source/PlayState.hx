@@ -276,10 +276,6 @@ class PlayState extends MusicBeatState
 	var detailsPausedText:String = "";
 	#end
 
-	#if mobileC
-	var mcontrols:Mobilecontrols; 
-	#end	
-
 	private var luaArray:Array<FunkinLua> = [];
 
 	//Achievement shit
