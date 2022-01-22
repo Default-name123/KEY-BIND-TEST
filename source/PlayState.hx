@@ -1345,7 +1345,7 @@ class PlayState extends MusicBeatState
 		var ret:Dynamic = callOnLuas('onStartCountdown', []);
 		if(ret != FunkinLua.Function_Stop) {
                         #if mobileC
-		        mcontrols.visible = true;
+		       _hitbox.visible = true;
 		        #end
 			generateStaticArrows(0);
 			generateStaticArrows(1);
@@ -3208,7 +3208,7 @@ class PlayState extends MusicBeatState
 			}
 		}
 		#if mobileC
-		mcontrols.visible = false;
+		_hitbox.visible = false;
 		#end
 		timeBarBG.visible = false;
 		timeBar.visible = false;
