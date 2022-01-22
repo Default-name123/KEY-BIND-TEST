@@ -78,7 +78,7 @@ class CoolUtil
 			case 0: 
 				binds = [keysMap.get('note_left')[0],keysMap.get('note_down')[0], keysMap.get('note_up')[0], keysMap.get('note_right')[0]];
 			case 1: 
-				binds = [keysMap.get('6k0')[0], keysMap.get('6k1')[0], keysMap.get('6k2')[0], keysMap.get('6k4')[0], keysMap.get('6k5')[0], keysMap.get('6k6')[0]];
+				binds = [keysMap.get('s0')[0], keysMap.get('s1')[0], keysMap.get('s2')[0], keysMap.get('s4')[0], keysMap.get('s5')[0], keysMap.get('s6')[0]];
 			case 2: 
 				if (PlayState.maniaToChange	!= 2)
 				{
@@ -87,35 +87,35 @@ class CoolUtil
 						case 0: 
 							binds = [keysMap.get('note_left')[0],keysMap.get('note_down')[0], keysMap.get('note_up')[0], keysMap.get('note_right')[0], -1, -1, -1, -1, -1];
 						case 1: 
-							binds = [keysMap.get('6k0')[0], keysMap.get('6k5')[0], keysMap.get('6k1')[0], keysMap.get('6k2')[0],-1, keysMap.get('6k4')[0],-1, -1,keysMap.get('6k6')[0]];
+							binds = [keysMap.get('s0')[0], keysMap.get('s5')[0], keysMap.get('s1')[0], keysMap.get('s2')[0],-1, keysMap.get('s4')[0],-1, -1,keysMap.get('s6')[0]];
 						case 3: 
-							binds = [keysMap.get('note_left')[0],keysMap.get('note_down')[0], keysMap.get('note_up')[0], keysMap.get('note_right')[0], keysMap.get('6k3')[0], -1, -1, -1, -1];
+							binds = [keysMap.get('note_left')[0],keysMap.get('note_down')[0], keysMap.get('note_up')[0], keysMap.get('note_right')[0], keysMap.get('s3')[0], -1, -1, -1, -1];
 						case 4: 
-							binds = [keysMap.get('6k0')[0], keysMap.get('6k5')[0], keysMap.get('6k1')[0], keysMap.get('6k2')[0],keysMap.get('6k3')[0], keysMap.get('6k4')[0],-1, -1,keysMap.get('6k6')[0]];
+							binds = [keysMap.get('s0')[0], keysMap.get('s5')[0], keysMap.get('s1')[0], keysMap.get('s2')[0],keysMap.get('s3')[0], keysMap.get('s4')[0],-1, -1,keysMap.get('s6')[0]];
 						case 5: 
-							binds = [keysMap.get('9k0')[0], keysMap.get('9k1')[0], keysMap.get('9k2')[0], keysMap.get('9k3')[0], -1, keysMap.get('9k5')[0], keysMap.get('9k6')[0], keysMap.get('9k7')[0], keysMap.get('9k8')[0]];
+							binds = [keysMap.get('n0')[0], keysMap.get('n1')[0], keysMap.get('n2')[0], keysMap.get('n3')[0], -1, keysMap.get('n5')[0], keysMap.get('n6')[0], keysMap.get('n7')[0], keysMap.get('n8')[0]];
 						case 6: 
-							binds = [-1,-1,-1,-1,keysMap.get('6k3')[0],-1,-1,-1,-1];
+							binds = [-1,-1,-1,-1,keysMap.get('s3')[0],-1,-1,-1,-1];
 						case 7:
 							binds = [keysMap.get('note_left')[0],-1,-1, keysMap.get('note_right')[0],-1,-1,-1,-1,-1];
 						case 8: 
-							binds = [keysMap.get('note_left')[0],-1,-1, keysMap.get('note_right')[0],keysMap.get('6k3')[0],-1,-1,-1,-1];
+							binds = [keysMap.get('note_left')[0],-1,-1, keysMap.get('note_right')[0],keysMap.get('s3')[0],-1,-1,-1,-1];
 					}
 				}
 				else
-					binds = [keysMap.get('9k0')[0], keysMap.get('9k1')[0], keysMap.get('9k2')[0], keysMap.get('9k3')[0], keysMap.get('9k4')[0], keysMap.get('9k5')[0], keysMap.get('9k6')[0], keysMap.get('9k7')[0], keysMap.get('9k8')[0]];
+					binds = [keysMap.get('n0')[0], keysMap.get('n1')[0], keysMap.get('n2')[0], keysMap.get('n3')[0], keysMap.get('n4')[0], keysMap.get('n5')[0], keysMap.get('n6')[0], keysMap.get('n7')[0], keysMap.get('n8')[0]];
 			case 3: 
-				binds = [keysMap.get('note_left')[0],keysMap.get('note_down')[0], keysMap.get('6k3')[0], keysMap.get('note_up')[0], keysMap.get('note_right')[0]];
+				binds = [keysMap.get('note_left')[0],keysMap.get('note_down')[0], keysMap.get('s3')[0], keysMap.get('note_up')[0], keysMap.get('note_right')[0]];
 			case 4: 
-				binds = [keysMap.get('6k0')[0], keysMap.get('6k1')[0], keysMap.get('6k2')[0], keysMap.get('6k3')[0], keysMap.get('6k4')[0], keysMap.get('6k5')[0], keysMap.get('6k6')[0]];
+				binds = [keysMap.get('s0')[0], keysMap.get('s1')[0], keysMap.get('s2')[0], keysMap.get('s3')[0], keysMap.get('s4')[0], keysMap.get('s5')[0], keysMap.get('s6')[0]];
 			case 5: 
-				binds = [keysMap.get('9k0')[0], keysMap.get('9k1')[0], keysMap.get('9k2')[0], keysMap.get('9k3')[0], keysMap.get('9k5')[0], keysMap.get('9k6')[0], keysMap.get('9k7')[0], keysMap.get('9k8')[0]];
+				binds = [keysMap.get('n0')[0], keysMap.get('n1')[0], keysMap.get('n2')[0], keysMap.get('n3')[0], keysMap.get('n5')[0], keysMap.get('n6')[0], keysMap.get('n7')[0], keysMap.get('n8')[0]];
 			case 6: 
-				binds = [keysMap.get('6k3')[0]];
+				binds = [keysMap.get('s3')[0]];
 			case 7:
 				binds = [keysMap.get('note_left')[0], keysMap.get('note_right')[0]];
 			case 8: 
-				binds = [keysMap.get('note_left')[0], keysMap.get('6k3')[0], keysMap.get('note_right')[0]];
+				binds = [keysMap.get('note_left')[0], keysMap.get('s3')[0], keysMap.get('note_right')[0]];
 		}
 		return binds;
 	}
@@ -129,7 +129,7 @@ class CoolUtil
 				case 0: 
 					binds = [keysMap.get('note_left')[1],keysMap.get('note_down')[1], keysMap.get('note_up')[1], keysMap.get('note_right')[1]];
 				case 1: 
-					binds = [keysMap.get('6k0')[1], keysMap.get('6k1')[1], keysMap.get('6k2')[1], keysMap.get('6k4')[1], keysMap.get('6k5')[1], keysMap.get('6k6')[1]];
+					binds = [keysMap.get('s0')[1], keysMap.get('s1')[1], keysMap.get('s2')[1], keysMap.get('s4')[1], keysMap.get('s5')[1], keysMap.get('s6')[1]];
 				case 2: 
 					if (PlayState.maniaToChange	!= 2)
 					{
@@ -138,35 +138,35 @@ class CoolUtil
 							case 0: 
 								binds = [keysMap.get('note_left')[1],keysMap.get('note_down')[1], keysMap.get('note_up')[1], keysMap.get('note_right')[1], -1, -1, -1, -1, -1];
 							case 1: 
-								binds = [keysMap.get('6k0')[1], keysMap.get('6k5')[1], keysMap.get('6k1')[1], keysMap.get('6k2')[1],-1, keysMap.get('6k4')[1],-1, -1,keysMap.get('6k6')[0]];
+								binds = [keysMap.get('s0')[1], keysMap.get('s5')[1], keysMap.get('s1')[1], keysMap.get('s2')[1],-1, keysMap.get('s4')[1],-1, -1,keysMap.get('s6')[0]];
 							case 3: 
-								binds = [keysMap.get('note_left')[1],keysMap.get('note_down')[1], keysMap.get('note_up')[1], keysMap.get('note_right')[1], keysMap.get('6k3')[1], -1, -1, -1, -1];
+								binds = [keysMap.get('note_left')[1],keysMap.get('note_down')[1], keysMap.get('note_up')[1], keysMap.get('note_right')[1], keysMap.get('s3')[1], -1, -1, -1, -1];
 							case 4: 
-								binds = [keysMap.get('6k0')[1], keysMap.get('6k5')[1], keysMap.get('6k1')[1], keysMap.get('6k2')[1],keysMap.get('6k3')[1], keysMap.get('6k4')[1],-1, -1,keysMap.get('6k6')[1]];
+								binds = [keysMap.get('s0')[1], keysMap.get('s5')[1], keysMap.get('s1')[1], keysMap.get('s2')[1],keysMap.get('s3')[1], keysMap.get('s4')[1],-1, -1,keysMap.get('s6')[1]];
 							case 5: 
-								binds = [keysMap.get('9k0')[1], keysMap.get('9k1')[1], keysMap.get('9k2')[1], keysMap.get('9k3')[1], -1, keysMap.get('9k5')[1], keysMap.get('9k6')[1], keysMap.get('9k7')[1], keysMap.get('9k8')[1]];
+								binds = [keysMap.get('n0')[1], keysMap.get('n1')[1], keysMap.get('n2')[1], keysMap.get('n3')[1], -1, keysMap.get('n5')[1], keysMap.get('n6')[1], keysMap.get('n7')[1], keysMap.get('n8')[1]];
 							case 6: 
-								binds = [-1,-1,-1,-1,keysMap.get('6k3')[1],-1,-1,-1,-1];
+								binds = [-1,-1,-1,-1,keysMap.get('s3')[1],-1,-1,-1,-1];
 							case 7:
 								binds = [keysMap.get('note_left')[1],-1,-1, keysMap.get('note_right')[1],-1,-1,-1,-1,-1];
 							case 8: 
-								binds = [keysMap.get('note_left')[1],-1,-1, keysMap.get('note_right')[1],keysMap.get('6k3')[1],-1,-1,-1,-1];
+								binds = [keysMap.get('note_left')[1],-1,-1, keysMap.get('note_right')[1],keysMap.get('s3')[1],-1,-1,-1,-1];
 						}
 					}
 					else
-						binds = [keysMap.get('9k0')[1], keysMap.get('9k1')[1], keysMap.get('9k2')[1], keysMap.get('9k3')[1], keysMap.get('9k4')[1], keysMap.get('9k5')[1], keysMap.get('9k6')[1], keysMap.get('9k7')[1], keysMap.get('9k8')[1]];
+						binds = [keysMap.get('n0')[1], keysMap.get('n1')[1], keysMap.get('n2')[1], keysMap.get('n3')[1], keysMap.get('n4')[1], keysMap.get('n5')[1], keysMap.get('n6')[1], keysMap.get('n7')[1], keysMap.get('n8')[1]];
 				case 3: 
-					binds = [keysMap.get('note_left')[1],keysMap.get('note_down')[1], keysMap.get('6k3')[1], keysMap.get('note_up')[1], keysMap.get('note_right')[1]];
+					binds = [keysMap.get('note_left')[1],keysMap.get('note_down')[1], keysMap.get('s3')[1], keysMap.get('note_up')[1], keysMap.get('note_right')[1]];
 				case 4: 
-					binds = [keysMap.get('6k0')[1], keysMap.get('6k1')[1], keysMap.get('6k2')[1], keysMap.get('6k3')[1], keysMap.get('6k4')[1], keysMap.get('6k5')[1], keysMap.get('6k6')[1]];
+					binds = [keysMap.get('s0')[1], keysMap.get('s1')[1], keysMap.get('s2')[1], keysMap.get('s3')[1], keysMap.get('s4')[1], keysMap.get('s5')[1], keysMap.get('s6')[1]];
 				case 5: 
-					binds = [keysMap.get('9k0')[1], keysMap.get('9k1')[1], keysMap.get('9k2')[1], keysMap.get('9k3')[1], keysMap.get('9k5')[1], keysMap.get('9k6')[1], keysMap.get('9k7')[1], keysMap.get('9k8')[1]];
+					binds = [keysMap.get('n0')[1], keysMap.get('n1')[1], keysMap.get('n2')[1], keysMap.get('n3')[1], keysMap.get('n5')[1], keysMap.get('n6')[1], keysMap.get('n7')[1], keysMap.get('n8')[1]];
 				case 6: 
-					binds = [keysMap.get('6k3')[1]];
+					binds = [keysMap.get('s3')[1]];
 				case 7:
 					binds = [keysMap.get('note_left')[1], keysMap.get('note_right')[1]];
 				case 8: 
-					binds = [keysMap.get('note_left')[1], keysMap.get('6k3')[1], keysMap.get('note_right')[1]];
+					binds = [keysMap.get('note_left')[1], keysMap.get('s3')[1], keysMap.get('note_right')[1]];
 			}
 			return binds;
 		}
